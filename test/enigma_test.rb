@@ -18,5 +18,6 @@ class EnigmaTest < Minitest::Test
   def test_it_can_get_random_key
     enigma = Enigma.new
     assert_equal 5, enigma.get_key.length
+    assert_instance_of Integer, enigma.get_key.to_i 
   end
 end
