@@ -11,7 +11,12 @@ class EnigmaTest < Minitest::Test
 
   def test_it_has_a_character_set
     enigma = Enigma.new
-    expected = ('a'..'z').to_a << " " 
+    expected = ('a'..'z').to_a << " "
     assert_equal expected, enigma.character_set
+  end
+
+  def test_it_can_get_random_key
+    enigma = Enigma.new
+    assert_equal 5, enigma.get_key.length
   end
 end
