@@ -16,4 +16,12 @@ class Shifter
     end
     key_numbers
   end
+
+  def final_shift_values(key, date)
+    key_numbers = get_shift_values(key)
+    offset_values = get_offset_values(date)
+    final_values = []
+    4.times {|index| final_values << key_numbers[index] + offset_values[index]}
+    final_values
+  end
 end
