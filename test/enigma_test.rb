@@ -108,4 +108,10 @@ class EnigmaTest < Minitest::Test
     actual = enigma.encrypt_refactor('hello world', '02715', '040895')
     assert_equal 'keder ohulw', actual
   end
+
+  def test_it_can_decrypt
+    enigma = Enigma.new
+    actual = enigma.decrypt('keder ohulw', '02715', '040895')
+    assert_equal 'hello world', actual
+  end
 end
