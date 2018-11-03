@@ -1,7 +1,16 @@
+require 'date'
 class Enigma
   attr_reader :character_set
   def initialize
     @character_set = ('a'..'z').to_a << ' '
+  end
+
+  def get_todays_date
+    date = Date.today
+    day = date.strftime('%d')
+    month = date.strftime('%m')
+    year = date.strftime('%y')
+    today = "#{day}#{month}#{year}"
   end
 
   def get_key
@@ -45,7 +54,7 @@ class Enigma
 
   def encrypt_message(message, key, date)
     shift_values = final_shift_values(key, date)
-    letters = message.chars
+    letters = message.downcase.chars
     shifted_letters = []
     letters.each_index do |index|
       letter = letters[index]
@@ -59,6 +68,29 @@ class Enigma
         elsif index % 4 == 3
           shifted_letters << shift(shift_values[3], letter)
         end
+      else
+        shifted_letters << letter
+      end
+    end
+    shifted_letters.join
+  end
+
+  def encrypt(message, key = get_key, date = get_todays_date)
+    encryption_return = { encryption: encrypt_refactor(message, key, date),
+                         key: key,
+                         date: date }
+  end
+
+  def encrypt_refactor(message, key, date)
+    shift_values = final_shift_values(key, date)
+    letters = message.downcase.chars
+    shifted_letters = []
+    (letters.length).times do |i|
+      if @character_set.include?(letters[i])
+        new_letter = shift(shift_values.rotate(i)[0], letters[i])
+        shifted_letters << new_letter
+      else
+        shifted_letters << letters[i]
       end
     end
     shifted_letters.join
