@@ -24,17 +24,8 @@ class Enigma
     key.join
   end
 
-  def get_shift_values(key)
-    key_values = key.chars
-    key_numbers = []
-    (key_values.length - 1).times do |index|
-      key_numbers << ("#{key_values[index]}#{key_values[index + 1]}").to_i
-    end
-    key_numbers
-  end
-
   def final_shift_values(key, date)
-    key_numbers = get_shift_values(key)
+    key_numbers = shifter.get_shift_values(key)
     offset_values = shifter.get_offset_values(date)
     final_values = []
     4.times {|index| final_values << key_numbers[index] + offset_values[index]}
