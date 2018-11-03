@@ -24,14 +24,6 @@ class Enigma
     key.join
   end
 
-  def final_shift_values(key, date)
-    key_numbers = shifter.get_shift_values(key)
-    offset_values = shifter.get_offset_values(date)
-    final_values = []
-    4.times {|index| final_values << key_numbers[index] + offset_values[index]}
-    final_values
-  end
-
   def shift(shift_value, letter)
     letter_index = @character_set.index(letter)
     rotated_characters = @character_set.rotate(shift_value)
@@ -39,7 +31,7 @@ class Enigma
   end
 
   def encrypt_message(message, key, date)
-    shift_values = final_shift_values(key, date)
+    shift_values = shifter.final_shift_values(key, date)
     letters = message.downcase.chars
     shifted_letters = []
     letters.each_index do |index|
@@ -68,7 +60,7 @@ class Enigma
   end
 
   def encrypt_refactor(message, key, date)
-    shift_values = final_shift_values(key, date)
+    shift_values = shifter.final_shift_values(key, date)
     letters = message.downcase.chars
     shifted_letters = []
     (letters.length).times do |i|
@@ -89,7 +81,7 @@ class Enigma
   end
 
   def decrypt_message(encrypted_message, key, date)
-    shift_values = final_shift_values(key, date)
+    shift_values = shifter.final_shift_values(key, date)
     encrypted_letters = encrypted_message.chars
     unshifted_letters = []
     (encrypted_letters.length).times do |i|
