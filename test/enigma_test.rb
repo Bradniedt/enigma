@@ -26,24 +26,24 @@ class EnigmaTest < Minitest::Test
   def test_it_can_get_offset_values
     enigma = Enigma.new
     expected = [1, 0, 2, 5]
-    assert_equal expected, enigma.get_offset_values('040895')
+    assert_equal expected, enigma.shifter.get_offset_values('040895')
   end
 
   def test_it_can_get_shift_values
     enigma = Enigma.new
     expected = [2, 27, 71, 15]
-    assert_equal expected, enigma.get_shift_values('02715')
+    assert_equal expected, enigma.shifter.get_shift_values('02715')
   end
 
   def test_it_can_get_final_shift_values
     enigma = Enigma.new
     expected = [3, 27, 73, 20]
-    assert_equal expected, enigma.final_shift_values('02715', '040895')
+    assert_equal expected, enigma.shifter.final_shift_values('02715', '040895')
   end
 
   def test_it_can_shift_a_value
     enigma = Enigma.new
-    assert_equal 'c', enigma.shift(2, 'a')
+    assert_equal 'c', enigma.shifter.shift(2, 'a')
   end
 
   def test_it_can_encrypt_messages
@@ -113,7 +113,7 @@ class EnigmaTest < Minitest::Test
 
   def test_it_can_unshift_a_value
     enigma = Enigma.new
-    assert_equal 'a', enigma.unshift(2, 'c')
+    assert_equal 'a', enigma.shifter.unshift(2, 'c')
   end
 
   def test_it_can_decrypt
