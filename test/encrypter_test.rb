@@ -55,4 +55,10 @@ class EncrypterTest < Minitest::Test
     actual = encrypter.encrypt_message('hello world', '02715', '040895')
     assert_equal 'keder ohulw', actual
   end
+
+  def test_it_can_encrypt_capitalized_messages
+    encrypter = Encrypter.new
+    actual = encrypter.encrypt_message('HELLO WORLD', '02715', '040895')
+    assert_equal 'keder ohulw', actual
+  end
 end
