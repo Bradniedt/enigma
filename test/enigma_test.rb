@@ -26,7 +26,7 @@ class EnigmaTest < Minitest::Test
   def test_it_can_get_offset_values
     enigma = Enigma.new
     expected = [1, 0, 2, 5]
-    assert_equal expected, enigma.get_offset_values('040895')
+    assert_equal expected, enigma.shifter.get_offset_values('040895')
   end
 
   def test_it_can_get_shift_values
