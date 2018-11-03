@@ -32,7 +32,7 @@ class EnigmaTest < Minitest::Test
   def test_it_can_get_shift_values
     enigma = Enigma.new
     expected = [2, 27, 71, 15]
-    assert_equal expected, enigma.get_shift_values('02715')
+    assert_equal expected, enigma.shifter.get_shift_values('02715')
   end
 
   def test_it_can_get_final_shift_values
