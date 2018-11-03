@@ -44,4 +44,9 @@ class EncrypterTest < Minitest::Test
     encrypter = Encrypter.new
     assert_equal 'c', encrypter.shifter.shift(2, 'a')
   end
+
+  def test_it_can_unshift_a_value
+    encrypter = Encrypter.new
+    assert_equal 'a', encrypter.shifter.unshift(2, 'c')
+  end
 end
