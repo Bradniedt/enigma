@@ -56,4 +56,13 @@ class EnigmaTest < Minitest::Test
     enigma = Enigma.new
     assert_equal '031118', enigma.get_todays_date
   end
+
+  def test_it_can_return_a_hash_after_encryption
+    enigma = Enigma.new
+    actual = enigma.encrypt_message('hello world', '02715', '040895')
+    expected = { encryption: "keder ohulw",
+                 key: "02715",
+                 date: "040895" }
+    assert_equal expected, actual
+  end
 end
