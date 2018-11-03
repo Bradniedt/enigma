@@ -118,7 +118,9 @@ class Enigma
   end
 
   def decrypt(encrypted_message, key, date = get_todays_date)
-    decryption_return = { decryption: decrypt_message(encrypted_message, key, date),
+    decryption_return = { decryption: decrypt_message( encrypted_message,
+                                                       key,
+                                                       date ),
                          key: key,
                          date: date }
   end
