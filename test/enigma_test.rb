@@ -22,4 +22,10 @@ class EnigmaTest < Minitest::Test
     assert_equal 5, enigma.get_key.length
     assert_instance_of Integer, enigma.get_key.to_i
   end
+
+  def test_it_can_get_offset_values
+    enigma = Enigma.new
+    expected = [1, 0, 2, 5]
+    assert_equal expected, enigma.get_offset_values('040895')
+  end
 end

@@ -11,4 +11,6 @@ class Enigma
     end
     key.join
   end
+
+
 end
