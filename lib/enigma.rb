@@ -1,8 +1,11 @@
 require 'date'
+require './lib/shifter'
 class Enigma
-  attr_reader :character_set
+  attr_reader :character_set,
+              :shifter
   def initialize
     @character_set = ('a'..'z').to_a << ' '
+    @shifter = Shifter.new
   end
 
   def get_todays_date
