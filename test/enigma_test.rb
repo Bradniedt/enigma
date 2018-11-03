@@ -84,4 +84,13 @@ class EnigmaTest < Minitest::Test
                  date: "031118" }
     assert_equal expected, actual
   end
+
+  def test_it_can_encrypt_a_capitalized_message_and_output_downcased
+    enigma = Enigma.new
+    actual = enigma.encrypt('HELLO WORLD', '02715', '040895')
+    expected = { encryption: "keder ohulw",
+                 key: "02715",
+                 date: "040895" }
+    assert_equal expected, actual
+  end
 end
