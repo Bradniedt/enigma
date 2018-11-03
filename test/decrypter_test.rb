@@ -55,4 +55,10 @@ class DecrypterTest < Minitest::Test
     actual = decrypter.decrypt_message('keder ohulw', '02715', '040895')
     assert_equal 'hello world', actual
   end
+
+  def test_it_can_decrypt_messages_with_punctuation
+    decrypter = Decrypter.new
+    actual = decrypter.decrypt_message('keder ohulw!', '02715', '040895')
+    assert_equal 'hello world!', actual
+  end
 end
