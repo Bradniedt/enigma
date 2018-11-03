@@ -95,4 +95,10 @@ class Enigma
     end
     shifted_letters.join
   end
+
+  def unshift(shift_value, encrypted_letter)
+    encrypted_letter_index = @character_set.index(encrypted_letter)
+    rotated_characters = @character_set.rotate(-(shift_value))
+    true_letter = rotated_characters[encrypted_letter_index]
+  end
 end
