@@ -116,4 +116,10 @@ class Enigma
     end
     unshifted_letters.join
   end
+
+  def decrypt(encrypted_message, key = get_key, date = get_todays_date)
+    decryption_return = { decryption: decrypt_message(encrypted_message, key, date),
+                         key: key,
+                         date: date }
+  end
 end
