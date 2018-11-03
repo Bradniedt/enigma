@@ -45,4 +45,10 @@ class EnigmaTest < Minitest::Test
     enigma = Enigma.new
     assert_equal 'c', enigma.shift(2, 'a')
   end
+
+  def test_it_can_encrypt_messages
+    enigma = Enigma.new
+    enigma.final_shift_values('02715', '040895')
+    assert_equal 'keder ohulw', enigma.encrypt_message('hello world')
+  end
 end
