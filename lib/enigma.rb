@@ -5,12 +5,13 @@ require './lib/decrypter'
 class Enigma
   attr_reader :character_set,
               :shifter,
-              :encrypter
+              :encrypter,
+              :decrypter
   def initialize
     @character_set = ('a'..'z').to_a << ' '
     @shifter = Shifter.new
     @encrypter = Encrypter.new
-    @encrypter = Decrypter.new
+    @decrypter = Decrypter.new
   end
 
   def get_todays_date
