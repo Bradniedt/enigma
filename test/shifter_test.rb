@@ -33,4 +33,9 @@ class ShifterTest < Minitest::Test
     shifter = Shifter.new
     assert_equal 'c', shifter.shift(2, 'a')
   end
+
+  def test_it_can_unshift_a_value
+    shifter = Shifter.new
+    assert_equal 'a', shifter.unshift(2, 'c')
+  end
 end
