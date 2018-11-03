@@ -10,4 +10,9 @@ class EncrypterTest < Minitest::Test
     encrypter = Encrypter.new
     assert_instance_of Encrypter, encrypter
   end
+
+  def test_it_has_a_shifter
+    encrypter = Encrypter.new
+    assert_instance_of Shifter, encrypter.shifter
+  end
 end
