@@ -15,4 +15,10 @@ class DecrypterTest < Minitest::Test
     decrypter = Decrypter.new
     assert_instance_of Shifter, decrypter.shifter
   end
+
+  def test_it_has_a_character_set
+    decrypter = Decrypter.new
+    expected = ('a'..'z').to_a << " "
+    assert_equal expected, decrypter.shifter.character_set
+  end
 end
