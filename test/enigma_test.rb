@@ -51,4 +51,9 @@ class EnigmaTest < Minitest::Test
     actual = enigma.encrypt_message('hello world', '02715', '040895')
     assert_equal 'keder ohulw', actual
   end
+
+  def test_it_can_get_todays_date
+    enigma = Enigma.new
+    assert_equal '031118', enigma.get_todays_date
+  end
 end
