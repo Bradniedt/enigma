@@ -46,16 +46,18 @@ class Enigma
   def encrypt_message(message, key, date)
     shift_values = final_shift_values(key, date)
     letters = message.chars
-    shifted_letters = letters.map do |letter|
+    shifted_letters = []
+    letters.each_index do |index|
+      letter = letters[index]
       if @character_set.include?(letter)
-        if letters.index(letter) % 4 == 0
-          shift(shift_values[0], letter)
-        elsif letters.index(letter) % 4 == 1
-          shift(shift_values[1], letter)
-        elsif letters.index(letter) % 4 == 2
-          shift(shift_values[2], letter)
-        elsif letters.index(letter) % 4 == 3
-          shift(shift_values[3], letter)
+        if index % 4 == 0
+          shifted_letters << shift(shift_values[0], letter)
+        elsif index % 4 == 1
+          shifted_letters << shift(shift_values[1], letter)
+        elsif index % 4 == 2
+          shifted_letters << shift(shift_values[2], letter)
+        elsif index % 4 == 3
+          shifted_letters << shift(shift_values[3], letter)
         end
       end
     end
