@@ -72,4 +72,10 @@ class Enigma
     end
     shifted_letters.join
   end
+
+  def encrypt(message, key, date)
+    encryption_return = { encryption: encrypt_message(message, key, date),
+                         key: key,
+                         date: date }
+  end
 end
