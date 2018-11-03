@@ -1,0 +1,3 @@
+class Encrypter
+
+end 
