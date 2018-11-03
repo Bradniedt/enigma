@@ -102,4 +102,10 @@ class EnigmaTest < Minitest::Test
                  date: "040895" }
     assert_equal expected, actual
   end
+
+  def test_it_can_encrypt_messages_with_refactored_encrypt
+    enigma = Enigma.new
+    actual = enigma.encrypt_refactor('hello world', '02715', '040895')
+    assert_equal 'keder ohulw', actual
+  end
 end
