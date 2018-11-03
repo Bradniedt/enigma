@@ -49,4 +49,10 @@ class DecrypterTest < Minitest::Test
     decrypter = Decrypter.new
     assert_equal 'a', decrypter.shifter.unshift(2, 'c')
   end
+
+  def test_it_can_decrypt
+    decrypter = Decrypter.new
+    actual = decrypter.decrypt_message('keder ohulw', '02715', '040895')
+    assert_equal 'hello world', actual
+  end
 end
