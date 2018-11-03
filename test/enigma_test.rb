@@ -40,4 +40,9 @@ class EnigmaTest < Minitest::Test
     expected = [3, 27, 73, 20]
     assert_equal expected, enigma.final_shift_values('02715', '040895')
   end
+
+  def test_it_can_rotate_values
+    enigma = Enigma.new
+    assert_equal 'c', enigma.rotate_value(2, 'a')
+  end
 end
