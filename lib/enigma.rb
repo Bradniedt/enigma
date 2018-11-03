@@ -54,7 +54,7 @@ class Enigma
 
   def encrypt_message(message, key, date)
     shift_values = final_shift_values(key, date)
-    letters = message.chars
+    letters = message.downcase.chars
     shifted_letters = []
     letters.each_index do |index|
       letter = letters[index]
