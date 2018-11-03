@@ -68,7 +68,7 @@ class EnigmaTest < Minitest::Test
 
   def test_it_can_encrypt_if_no_key_or_date_are_given
     enigma = Enigma.new
-    actual = enigma.encrypt('hello world', '02715', '040895')
+    actual = enigma.encrypt('hello world')
     expected = { encryption: "keder ohulw",
                  key: "02715",
                  date: "040895" }
