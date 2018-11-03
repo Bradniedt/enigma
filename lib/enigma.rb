@@ -42,4 +42,23 @@ class Enigma
     rotated_characters = @character_set.rotate(shift_value)
     new_letter = rotated_characters[letter_index]
   end
+
+  def encrypt_message(message, key, date)
+    shift_values = final_shift_values(key, date)
+    letters = message.chars
+    shifted_letters = letters.map do |letter|
+      if @character_set.include?(letter)
+        if letters.index(letter) % 4 == 0
+          shift(shift_values[0], letter)
+        elsif letters.index(letter) % 4 == 1
+          shift(shift_values[1], letter)
+        elsif letters.index(letter) % 4 == 2
+          shift(shift_values[2], letter)
+        elsif letters.index(letter) % 4 == 3
+          shift(shift_values[3], letter)
+        end
+      end
+    end
+    shifted_letters.join
+  end
 end
