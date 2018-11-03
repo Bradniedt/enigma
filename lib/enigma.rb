@@ -68,6 +68,8 @@ class Enigma
         elsif index % 4 == 3
           shifted_letters << shift(shift_values[3], letter)
         end
+      else
+        shifted_letters << letter
       end
     end
     shifted_letters.join
