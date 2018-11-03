@@ -48,7 +48,7 @@ class EnigmaTest < Minitest::Test
 
   def test_it_can_encrypt_messages
     enigma = Enigma.new
-    actual = enigma.encrypt_message('hello world', '02715', '040895')
+    actual = enigma.encrypter.encrypt_message('hello world', '02715', '040895')
     assert_equal 'keder ohulw', actual
   end
 
@@ -103,12 +103,6 @@ class EnigmaTest < Minitest::Test
                  key: "02715",
                  date: "040895" }
     assert_equal expected, actual
-  end
-
-  def test_it_can_encrypt_messages_with_refactored_encrypt
-    enigma = Enigma.new
-    actual = enigma.encrypt_refactor('hello world', '02715', '040895')
-    assert_equal 'keder ohulw', actual
   end
 
   def test_it_can_unshift_a_value
