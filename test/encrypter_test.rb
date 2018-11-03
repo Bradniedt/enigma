@@ -49,4 +49,10 @@ class EncrypterTest < Minitest::Test
     encrypter = Encrypter.new
     assert_equal 'a', encrypter.shifter.unshift(2, 'c')
   end
+
+  def test_it_can_encrypt_messages
+    encrypter = Encrypter.new
+    actual = encrypter.encrypt_message('hello world', '02715', '040895')
+    assert_equal 'keder ohulw', actual
+  end
 end
