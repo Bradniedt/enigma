@@ -1,7 +1,16 @@
+require 'date'
 class Enigma
   attr_reader :character_set
   def initialize
     @character_set = ('a'..'z').to_a << ' '
+  end
+
+  def get_todays_date
+    date = Date.today
+    day = date.strftime('%d')
+    month = date.strftime('%m')
+    year = date.strftime('%y')
+    today = "#{day}#{month}#{year}"
   end
 
   def get_key
