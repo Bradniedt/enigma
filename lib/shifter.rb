@@ -1,5 +1,7 @@
 class Shifter
-
+  def initialize
+    @character_set = ('a'..'z').to_a << ' '
+  end
   def get_offset_values(date)
     offsets = []
     square = date.to_i * date.to_i
@@ -23,5 +25,11 @@ class Shifter
     final_values = []
     4.times {|index| final_values << key_numbers[index] + offset_values[index]}
     final_values
+  end
+
+  def shift(shift_value, letter)
+    letter_index = @character_set.index(letter)
+    rotated_characters = @character_set.rotate(shift_value)
+    new_letter = rotated_characters[letter_index]
   end
 end
