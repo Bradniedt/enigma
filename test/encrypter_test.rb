@@ -29,8 +29,8 @@ class EncrypterTest < Minitest::Test
   end
 
   def test_it_can_get_shift_values
-    enigma = Enigma.new
+    encrypter = Encrypter.new
     expected = [2, 27, 71, 15]
-    assert_equal expected, enigma.shifter.get_shift_values('02715')
+    assert_equal expected, encrypter.shifter.get_shift_values('02715')
   end
 end
