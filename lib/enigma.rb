@@ -24,12 +24,6 @@ class Enigma
     key.join
   end
 
-  def shift(shift_value, letter)
-    letter_index = @character_set.index(letter)
-    rotated_characters = @character_set.rotate(shift_value)
-    new_letter = rotated_characters[letter_index]
-  end
-
   def encrypt_message(message, key, date)
     shift_values = shifter.final_shift_values(key, date)
     letters = message.downcase.chars
@@ -38,13 +32,13 @@ class Enigma
       letter = letters[index]
       if @character_set.include?(letter)
         if index % 4 == 0
-          shifted_letters << shift(shift_values[0], letter)
+          shifted_letters << shifter.shift(shift_values[0], letter)
         elsif index % 4 == 1
-          shifted_letters << shift(shift_values[1], letter)
+          shifted_letters << shifter.shift(shift_values[1], letter)
         elsif index % 4 == 2
-          shifted_letters << shift(shift_values[2], letter)
+          shifted_letters << shifter.shift(shift_values[2], letter)
         elsif index % 4 == 3
-          shifted_letters << shift(shift_values[3], letter)
+          shifted_letters << shifter.shift(shift_values[3], letter)
         end
       else
         shifted_letters << letter
@@ -65,7 +59,7 @@ class Enigma
     shifted_letters = []
     (letters.length).times do |i|
       if @character_set.include?(letters[i])
-        new_letter = shift(shift_values.rotate(i)[0], letters[i])
+        new_letter = shifter.shift(shift_values.rotate(i)[0], letters[i])
         shifted_letters << new_letter
       else
         shifted_letters << letters[i]
