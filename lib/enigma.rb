@@ -101,4 +101,19 @@ class Enigma
     rotated_characters = @character_set.rotate(-(shift_value))
     true_letter = rotated_characters[encrypted_letter_index]
   end
+
+  def decrypt_message(encrypted_message, key, date)
+    shift_values = final_shift_values(key, date)
+    encrypted_letters = encrypted_message.chars
+    unshifted_letters = []
+    (encrypted_letters.length).times do |i|
+      if @character_set.include?(encrypted_letters[i])
+        true_letter = unshift(shift_values.rotate(i)[0], encrypted_letters[i])
+        unshifted_letters << true_letter
+      else
+        unshifted_letters << encrypted_letters[i]
+      end
+    end
+    unshifted_letters.join
+  end
 end
