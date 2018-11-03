@@ -119,4 +119,13 @@ class EnigmaTest < Minitest::Test
     actual = enigma.decrypt_message('keder ohulw', '02715', '040895')
     assert_equal 'hello world', actual
   end
+
+  def test_decrypt_method_returns_a_hash
+    enigma = Enigma.new
+    actual = enigma.encrypt('keder ohulw', '02715', '040895')
+    expected = { decryption: "hello world",
+                 key: "02715",
+                 date: "040895" }
+    assert_equal expected, actual
+  end
 end
