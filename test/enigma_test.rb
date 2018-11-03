@@ -115,7 +115,6 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_it_can_decrypt
-    skip
     enigma = Enigma.new
     actual = enigma.decrypt('keder ohulw', '02715', '040895')
     assert_equal 'hello world', actual
