@@ -28,4 +28,10 @@ class EnigmaTest < Minitest::Test
     expected = [1, 0, 2, 5]
     assert_equal expected, enigma.get_offset_values('040895')
   end
+
+  def test_it_can_get_shift_values
+    enigma = Enigma.new
+    expected = [3, 27, 73, 20]
+    assert_equal expected, enigma.get_shift_values('02715')
+  end
 end
