@@ -43,7 +43,7 @@ class EnigmaTest < Minitest::Test
 
   def test_it_can_shift_a_value
     enigma = Enigma.new
-    assert_equal 'c', enigma.shift(2, 'a')
+    assert_equal 'c', enigma.shifter.shift(2, 'a')
   end
 
   def test_it_can_encrypt_messages
