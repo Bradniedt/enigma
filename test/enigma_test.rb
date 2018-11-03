@@ -113,7 +113,7 @@ class EnigmaTest < Minitest::Test
 
   def test_it_can_unshift_a_value
     enigma = Enigma.new
-    assert_equal 'a', enigma.unshift(2, 'c')
+    assert_equal 'a', enigma.shifter.unshift(2, 'c')
   end
 
   def test_it_can_decrypt
