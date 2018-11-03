@@ -21,4 +21,10 @@ class EncrypterTest < Minitest::Test
     expected = ('a'..'z').to_a << " "
     assert_equal expected, encrypter.shifter.character_set
   end
+
+  def test_it_can_get_offset_values
+    encrypter = Encrypter.new
+    expected = [1, 0, 2, 5]
+    assert_equal expected, encrypter.shifter.get_offset_values('040895')
+  end
 end
