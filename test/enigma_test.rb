@@ -109,7 +109,13 @@ class EnigmaTest < Minitest::Test
     assert_equal 'keder ohulw', actual
   end
 
+  def test_it_can_unshift_a_value
+    enigma = Enigma.new
+    assert_equal 'a', enigma.shift(2, 'c')
+  end
+
   def test_it_can_decrypt
+    skip
     enigma = Enigma.new
     actual = enigma.decrypt('keder ohulw', '02715', '040895')
     assert_equal 'hello world', actual
