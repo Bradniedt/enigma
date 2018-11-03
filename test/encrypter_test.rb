@@ -33,4 +33,10 @@ class EncrypterTest < Minitest::Test
     expected = [2, 27, 71, 15]
     assert_equal expected, encrypter.shifter.get_shift_values('02715')
   end
+
+  def test_it_can_get_final_shift_values
+    encrypter = Encrypter.new
+    expected = [3, 27, 73, 20]
+    assert_equal expected, encrypter.shifter.final_shift_values('02715', '040895')
+  end
 end
