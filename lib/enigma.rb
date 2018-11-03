@@ -33,9 +33,7 @@ class Enigma
     key_numbers = get_shift_values(key)
     offset_values = get_offset_values(date)
     final_values = []
-    4.times do |index|
-      final_values << key_numbers[index] + offset_values[index]
-    end
+    4.times {|index| final_values << key_numbers[index] + offset_values[index]}
     final_values
   end
 end
