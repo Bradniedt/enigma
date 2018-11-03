@@ -80,4 +80,19 @@ class Enigma
                          key: key,
                          date: date }
   end
+
+  def encrypt_refactor(message, key, date)
+    shift_values = final_shift_values(key, date)
+    letters = message.downcase.chars
+    shifted_letters = []
+    (letters.length).times do |i|
+      if @character_set.include?(letters[i])
+        new_letter = shift(shift_values.rotate(i)[0], letters[i])
+        shifted_letters << new_letter
+      else
+        shifted_letters << letters[i]
+      end
+    end
+    shifted_letters.join
+  end
 end
