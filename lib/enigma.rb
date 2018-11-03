@@ -28,7 +28,7 @@ class Enigma
   end
 
   def encrypt(message, key = get_key, date = get_todays_date)
-    encryption_return = { encryption: encrypt_refactor(message, key, date),
+    encryption = { encryption: encrypter.encrypt_message(message, key, date),
                          key: key,
                          date: date }
   end
