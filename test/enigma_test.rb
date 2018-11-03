@@ -112,7 +112,7 @@ class EnigmaTest < Minitest::Test
 
   def test_it_can_decrypt
     enigma = Enigma.new
-    actual = enigma.decrypt_message('keder ohulw', '02715', '040895')
+    actual = enigma.decrypter.decrypt_message('keder ohulw', '02715', '040895')
     assert_equal 'hello world', actual
   end
 
