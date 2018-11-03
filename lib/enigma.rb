@@ -36,4 +36,10 @@ class Enigma
     4.times {|index| final_values << key_numbers[index] + offset_values[index]}
     final_values
   end
+
+  def shift(shift_value, letter)
+    letter_index = @character_set.index(letter)
+    rotated_characters = @character_set.rotate(shift_value)
+    new_letter = rotated_characters[letter_index]
+  end
 end
