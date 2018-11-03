@@ -71,7 +71,7 @@ class EnigmaTest < Minitest::Test
     actual = enigma.encrypt('hello world')
     expected = { encryption: "keder ohulw",
                  key: "02715",
-                 date: "040895" }
+                 date: "031118" }
     assert_equal expected, actual
   end
 end
