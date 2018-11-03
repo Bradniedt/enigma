@@ -28,4 +28,9 @@ class ShifterTest < Minitest::Test
     expected = [3, 27, 73, 20]
     assert_equal expected, shifter.final_shift_values('02715', '040895')
   end
+
+  def test_it_can_shift_a_value
+    shifter = Shifter.new
+    assert_equal 'c', shifter.shift(2, 'a')
+  end
 end
