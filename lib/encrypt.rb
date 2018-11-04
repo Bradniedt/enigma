@@ -1,4 +1,5 @@
 require './lib/enigma'
 message_file, encrypt_file = ARGV
-require 'pry'
-binding.pry
+enigma = Enigma.new
+message = open(message_file, 'r+') { |f| f.read}
+encryption = open(encrypt_file, "w")
