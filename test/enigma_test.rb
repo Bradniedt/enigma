@@ -54,7 +54,8 @@ class EnigmaTest < Minitest::Test
 
   def test_it_can_get_todays_date
     enigma = Enigma.new
-    assert_equal '041118', enigma.get_todays_date
+    expected = Date.today.strftime('%d%m%y')
+    assert_equal expected, enigma.get_todays_date
   end
 
   def test_encrypt_can_return_a_hash_after_encryption

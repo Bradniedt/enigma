@@ -13,11 +13,11 @@ class Shifter
 
   def get_shift_values(key)
     key_values = key.chars
-    key_numbers = []
+    shift_values = []
     (key_values.length - 1).times do |index|
-      key_numbers << ("#{key_values[index]}#{key_values[index + 1]}").to_i
+      shift_values << ("#{key_values[index]}#{key_values[index + 1]}").to_i
     end
-    key_numbers
+    shift_values
   end
 
   def final_shift_values(key, date)
@@ -35,8 +35,12 @@ class Shifter
   end
 
   def unshift(shift_value, encrypted_letter)
-    encrypted_letter_index = @character_set.index(encrypted_letter)
-    rotated_characters = @character_set.rotate(-(shift_value))
-    true_letter = rotated_characters[encrypted_letter_index]
+    if @character_set.include?(encrypted_letter)
+      encrypted_letter_index = @character_set.index(encrypted_letter)
+      rotated_characters = @character_set.rotate(-(shift_value))
+      true_letter = rotated_characters[encrypted_letter_index]
+    else
+      encrypted_letter
+    end
   end
 end
