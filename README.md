@@ -8,4 +8,8 @@
   There are only two methods (the encrypt_message and decrypt_message).
   No class is more than 100 lines.
   The variable and method names clearly communicate purpose. IE get_todays_date, encrypt_message.
-  
+
+####Test Driven Development
+
+
+####Version Control
