@@ -43,4 +43,9 @@ class ShifterTest < Minitest::Test
     shifter = Shifter.new
     assert_equal '!', shifter.shift(2, '!')
   end
+
+  def test_it_will_not_unshift_a_punctuation_mark
+    shifter = Shifter.new
+    assert_equal '!', shifter.unshift(2, '!')
+  end
 end
