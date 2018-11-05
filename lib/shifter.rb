@@ -29,9 +29,13 @@ class Shifter
   end
 
   def shift(shift_value, letter)
-    letter_index = @character_set.index(letter)
-    rotated_characters = @character_set.rotate(shift_value)
-    new_letter = rotated_characters[letter_index]
+    if @character_set.include?(letter)
+      letter_index = @character_set.index(letter)
+      rotated_characters = @character_set.rotate(shift_value)
+      new_letter = rotated_characters[letter_index]
+    else
+      letter
+    end 
   end
 
   def unshift(shift_value, encrypted_letter)
