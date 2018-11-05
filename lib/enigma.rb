@@ -16,10 +16,7 @@ class Enigma
 
   def get_todays_date
     date = Date.today
-    day = date.strftime('%d')
-    month = date.strftime('%m')
-    year = date.strftime('%y')
-    today = "#{day}#{month}#{year}"
+    today = date.strftime('%d%m%y')
   end
 
   def get_key

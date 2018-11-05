@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-03T16:17:40-06:00">2018-11-03T16:17:40-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-04T20:19:02-07:00">2018-11-04T20:19:02-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.84%</span></span>
+    (<span class="covered_percent"><span class="green">98.8%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         10.88
+         9.86
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>86</b> relevant lines. 
-    <span class="green"><b>85</b> lines covered</span> and
+    <b>83</b> relevant lines. 
+    <span class="green"><b>82</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -57,7 +57,7 @@
         <td>15</td>
         <td>14</td>
         <td>1</td>
-        <td>9.0</td>
+        <td>6.4</td>
       </tr>
       
       <tr>
@@ -67,17 +67,17 @@
         <td>15</td>
         <td>15</td>
         <td>0</td>
-        <td>11.7</td>
+        <td>11.6</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#f6c426d730418d40644e25f177f25d78fce9a16a" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>46</td>
-        <td>26</td>
-        <td>26</td>
+        <td>47</td>
+        <td>23</td>
+        <td>23</td>
         <td>0</td>
-        <td>4.1</td>
+        <td>4.0</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>30</td>
         <td>30</td>
         <td>0</td>
-        <td>17.3</td>
+        <td>15.2</td>
       </tr>
       
     </tbody>
@@ -144,8 +144,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="5">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="15" data-linenumber="5">
+          <span class="hits">15</span>
           
           <code class="ruby">    @shifter = Shifter.new</code>
         </li>
@@ -168,44 +168,44 @@
           <code class="ruby">  def decrypt_message(encrypted_message, key, date)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">    shift_values = shifter.final_shift_values(key, date)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
           <code class="ruby">    letters = encrypted_message.chars</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="11">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
           <code class="ruby">    unshifted_letters = []</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="12">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
           
           <code class="ruby">    (letters.length).times do |i|</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="13">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="22" data-linenumber="13">
+          <span class="hits">22</span>
           
           <code class="ruby">      if shifter.character_set.include?(letters[i])</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="14">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="22" data-linenumber="14">
+          <span class="hits">22</span>
           
           <code class="ruby">        true_letter = shifter.unshift(shift_values.rotate(i)[0], letters[i])</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="15">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="22" data-linenumber="15">
+          <span class="hits">22</span>
           
           <code class="ruby">        unshifted_letters &lt;&lt; true_letter</code>
         </li>
@@ -234,8 +234,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="20">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
           <code class="ruby">    unshifted_letters.join</code>
         </li>
@@ -301,8 +301,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="6">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="15" data-linenumber="6">
+          <span class="hits">15</span>
           
           <code class="ruby">    @shifter = Shifter.new</code>
         </li>
@@ -419,8 +419,8 @@
     <h3>lib/enigma.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>26</b> relevant lines. 
-      <span class="green"><b>26</b> lines covered</span> and
+      <b>23</b> relevant lines. 
+      <span class="green"><b>23</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -488,26 +488,26 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="11">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="15" data-linenumber="11">
+          <span class="hits">15</span>
           
           <code class="ruby">    @character_set = (&#39;a&#39;..&#39;z&#39;).to_a &lt;&lt; &#39; &#39;</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="12">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="15" data-linenumber="12">
+          <span class="hits">15</span>
           
           <code class="ruby">    @shifter = Shifter.new</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="13">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="15" data-linenumber="13">
+          <span class="hits">15</span>
           
           <code class="ruby">    @encrypter = Encrypter.new</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="14">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="15" data-linenumber="14">
+          <span class="hits">15</span>
           
           <code class="ruby">    @decrypter = Decrypter.new</code>
         </li>
@@ -530,175 +530,181 @@
           <code class="ruby">  def get_todays_date</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="18">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
           <code class="ruby">    date = Date.today</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
-          <code class="ruby">    day = date.strftime(&#39;%d&#39;)</code>
+          <code class="ruby">    today = date.strftime(&#39;%d%m%y&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="20">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="20">
           
-          <code class="ruby">    month = date.strftime(&#39;%m&#39;)</code>
+          
+          <code class="ruby">    # day = date.strftime(&#39;%d&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="21">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="21">
           
-          <code class="ruby">    year = date.strftime(&#39;%y&#39;)</code>
+          
+          <code class="ruby">    # month = date.strftime(&#39;%m&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="22">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="22">
           
-          <code class="ruby">    today = &quot;#{day}#{month}#{year}&quot;</code>
+          
+          <code class="ruby">    # year = date.strftime(&#39;%y&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    # today = &quot;#{day}#{month}#{year}&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">  def get_key</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="26">
+        <li class="covered" data-hits="2" data-linenumber="27">
           <span class="hits">2</span>
           
           <code class="ruby">    key = []</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="27">
+        <li class="covered" data-hits="2" data-linenumber="28">
           <span class="hits">2</span>
           
           <code class="ruby">    5.times do</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="28">
+        <li class="covered" data-hits="10" data-linenumber="29">
           <span class="hits">10</span>
           
           <code class="ruby">      key &lt;&lt; rand(0..6)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="30">
+        <li class="covered" data-hits="2" data-linenumber="31">
           <span class="hits">2</span>
           
           <code class="ruby">    key.join</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
           <code class="ruby">  def encrypt(message, key = get_key, date = get_todays_date)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="34">
+        <li class="covered" data-hits="3" data-linenumber="35">
           <span class="hits">3</span>
           
           <code class="ruby">    encryption = { encryption: encrypter.encrypt_message(message, key, date),</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">                   key: key,</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">                   date: date }</code>
+          <code class="ruby">                   key: key,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">                   date: date }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
           <code class="ruby">  def decrypt(encrypted_message, key, date = get_todays_date)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="40">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
           
           <code class="ruby">    decryption = { decryption: decrypter.decrypt_message( encrypted_message,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">                                                          key,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">                                                          date ),</code>
+          <code class="ruby">                                                          key,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">                   key: key,</code>
+          <code class="ruby">                                                          date ),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">                   date: date }</code>
+          <code class="ruby">                   key: key,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">                   date: date }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">end</code>
@@ -741,8 +747,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="48" data-linenumber="4">
-          <span class="hits">48</span>
+        <li class="covered" data-hits="45" data-linenumber="4">
+          <span class="hits">45</span>
           
           <code class="ruby">    @character_set = (&#39;a&#39;..&#39;z&#39;).to_a &lt;&lt; &#39; &#39;</code>
         </li>
@@ -759,32 +765,32 @@
           <code class="ruby">  def get_offset_values(date)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="7">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="7">
+          <span class="hits">8</span>
           
           <code class="ruby">    offsets = []</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="8">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
           
           <code class="ruby">    square = date.to_i * date.to_i</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="9">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="9">
+          <span class="hits">8</span>
           
           <code class="ruby">    last_four = square.to_s.slice(-4..-1).chars</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="10">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="40" data-linenumber="10">
+          <span class="hits">40</span>
           
           <code class="ruby">    4.times {|i| offsets &lt;&lt; last_four[i].to_i}</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="11">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="11">
+          <span class="hits">8</span>
           
           <code class="ruby">    offsets</code>
         </li>
@@ -807,26 +813,26 @@
           <code class="ruby">  def get_shift_values(key)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="15">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="15">
+          <span class="hits">8</span>
           
           <code class="ruby">    key_values = key.chars</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="16">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="16">
+          <span class="hits">8</span>
           
           <code class="ruby">    key_numbers = []</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="17">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="17">
+          <span class="hits">8</span>
           
           <code class="ruby">    (key_values.length - 1).times do |index|</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="18">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="32" data-linenumber="18">
+          <span class="hits">32</span>
           
           <code class="ruby">      key_numbers &lt;&lt; (&quot;#{key_values[index]}#{key_values[index + 1]}&quot;).to_i</code>
         </li>
@@ -837,8 +843,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="20">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="20">
+          <span class="hits">8</span>
           
           <code class="ruby">    key_numbers</code>
         </li>
@@ -861,32 +867,32 @@
           <code class="ruby">  def final_shift_values(key, date)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="24">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="7" data-linenumber="24">
+          <span class="hits">7</span>
           
           <code class="ruby">    key_numbers = get_shift_values(key)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="25">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="7" data-linenumber="25">
+          <span class="hits">7</span>
           
           <code class="ruby">    offset_values = get_offset_values(date)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="26">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="7" data-linenumber="26">
+          <span class="hits">7</span>
           
           <code class="ruby">    final_values = []</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="27">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="35" data-linenumber="27">
+          <span class="hits">35</span>
           
           <code class="ruby">    4.times {|index| final_values &lt;&lt; key_numbers[index] + offset_values[index]}</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="28">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="7" data-linenumber="28">
+          <span class="hits">7</span>
           
           <code class="ruby">    final_values</code>
         </li>
@@ -945,20 +951,20 @@
           <code class="ruby">  def unshift(shift_value, encrypted_letter)</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="38">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="23" data-linenumber="38">
+          <span class="hits">23</span>
           
           <code class="ruby">    encrypted_letter_index = @character_set.index(encrypted_letter)</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="39">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="23" data-linenumber="39">
+          <span class="hits">23</span>
           
           <code class="ruby">    rotated_characters = @character_set.rotate(-(shift_value))</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="40">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="23" data-linenumber="40">
+          <span class="hits">23</span>
           
           <code class="ruby">    true_letter = rotated_characters[encrypted_letter_index]</code>
         </li>
