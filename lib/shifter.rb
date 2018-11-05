@@ -13,11 +13,11 @@ class Shifter
 
   def get_shift_values(key)
     key_values = key.chars
-    key_numbers = []
+    shift_values = []
     (key_values.length - 1).times do |index|
-      key_numbers << ("#{key_values[index]}#{key_values[index + 1]}").to_i
+      shift_values << ("#{key_values[index]}#{key_values[index + 1]}").to_i
     end
-    key_numbers
+    shift_values
   end
 
   def final_shift_values(key, date)
