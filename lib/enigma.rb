@@ -8,7 +8,6 @@ class Enigma
               :encrypter,
               :decrypter
   def initialize
-    @character_set = ('a'..'z').to_a << ' '
     @shifter = Shifter.new
     @encrypter = Encrypter.new
     @decrypter = Decrypter.new
